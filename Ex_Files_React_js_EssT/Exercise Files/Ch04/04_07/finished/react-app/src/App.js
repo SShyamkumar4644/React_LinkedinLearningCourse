@@ -1,3 +1,4 @@
+// Incorporating useReducer
 import "./App.css";
 import { useReducer } from "react";
 

@@ -1,3 +1,4 @@
+// Destructuring arrays and objects
 import "./App.css";
 
 // const cities = ["Tokyo","Tahoe City", "Bend"];

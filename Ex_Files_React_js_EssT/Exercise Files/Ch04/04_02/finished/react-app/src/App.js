@@ -1,3 +1,4 @@
+// Touring a Create React App project
 import "./App.css";
 
 function App() {
@@ -9,3 +10,4 @@ function App() {
 }
 
 export default App;
+

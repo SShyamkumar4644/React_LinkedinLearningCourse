@@ -1,3 +1,4 @@
+// Understanding the dependency array
 import "./App.css";
 import { useState, useEffect } from "react";
 
