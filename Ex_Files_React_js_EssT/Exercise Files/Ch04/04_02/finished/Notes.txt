@@ -1,0 +1,41 @@
+1. Now that we have our project generated inside of the start folder react app,
+inside of the package JSON, you can see all of the different dependencies 
+that are part of the project. The main ones we should know about are react 
+and react dom. So, react is everything we need to actually create our react 
+components, react dom is how we add them to the page, and react scripts is 
+how we handle all of our bundling. You'll also notice, in the dependencies 
+section, that we have some testing libraries, which we'll talk about in a 
+little bit. 
+
+2. The main files that are part of our app are here in the source folder. So, 
+the source folder contains the index.js. Think of this as being kind of like 
+the entry point to your application. It's the main JavaScript file that we can 
+use to render our app right here to our dom. Notice too that we're using 
+document.getElementByID. This is referencing the root element inside of this 
+public folder. There's an index.HTML, much like the one that we worked with 
+before, where we're going to inject all of our react code. Now, let's collapse 
+this public folder again and we're going to go back to the index file. Something 
+to note is that we have the app wrapped with this other component called 
+react.strict mode. So, think of strict mode as being a tool for highlighting 
+any potential problems in your app. It's just a package that's going to activate 
+some additional checks to let you know if you've written any code incorrectly, 
+but these are only going to run in development.They're not going to run in production.
+
+3. So, the app component that we have here, if we go to the App.JS file, typically 
+our components will be kept inside of their own files. Notice here that this is a 
+function that we're creating. And, then at the bottom of this, we're exporting this 
+as the default export of this app JS file. So, this is really everything we need. 
+Now, something that we want to do is make sure that we're navigated to the react app
+
+4. Let's go back here and remove that though for now, something I just want to 
+mention too that's related to our exercise files is if you take a look at your 
+exercise files folders, you'll see in the finished or in the start folder, you'll 
+see our project here called react app. So, if we were to navigate to this folder 
+and run NPM start, you might notice that it says react scripts, command not found.
+And, this is because all of the dependencies for the project haven't been installed.
+Now, inside of our package JSON file, this is going to show all of the different 
+packages that you would need to install for this project. So, if I run NPM install 
+or NPM-I, this is going to install all of the dependencies, you'll notice that 
+there's a node modules folder here where all of those will go, and then you can 
+run NPM start again. If you do run into that problem, it's not a problem. Just 
+run NPM install, and then go ahead and run NPM start, and you should be good to go.
