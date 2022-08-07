@@ -1,3 +1,4 @@
+<!--Creating a React component-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -44,9 +45,45 @@
       }
 
       ReactDOM.render(
-        <App />,
+        <App />, // React always wants to render a single component. So we could wrap this in say a div. Make this the parent of both of the Header and the Main and now we can see that this has been added
         document.getElementById("root")
       );
     </script>
   </body>
 </html>
+
+<!--<script type="text/babel">
+      function Header() {
+        return (
+          <header>
+            <h1>Eve's Kitchen</h1>
+          </header>
+        );
+      }
+    
+      ReactDOM.render(
+        <Header />,
+        document.getElementById("root")
+      );
+    </script>
+
+    // Output : Eve's Kitchen
+    -->
+
+<!--Now that we have an understanding of how to create elements, we want to create our first component. 
+Think of a component like being a little building block. It's a piece of the user interface that we'll use to describe one part of our application. 
+What we can do first is get rid of our emoji helpers here. And then we're going to get rid of our unordered list as well. So at this point, we're going to create our first 
+component as a function. A component is just a JavaScript function that returns JSX. So if we added this here, we could say header and then header, and then inside of our h1, 
+we could say Eve's Kitchen. So now once we've created our header, we want to render the header using the ReactDOM.render function. Now, with JSX, we can, in addition to creating 
+these HTML elements, we can also render components. So any time we're creating a component, a couple of things to think about. We want to use a capital letter and we also want to 
+create this as a function. So let's refresh and we should see Eve's Kitchen being added to our page. Pretty cool. Now, the next thing we want to do here is let's add another 
+component. So we'll say function Main and here we'll return a section and another section, and we'll say p We serve the most delicious food around. So now that we've created our 
+Main component, we can render this one too. So we serve the most delicious food around has been added to our page. Now, something else I want to show you here is that sometimes we 
+want to add a couple different components to the page. It can feel tempting to do something like this where we're adding a Header and Main side by side. And what we'll notice right 
+away is that we can't do it. We see an error popping up here. Let's zoom out a little bit. We'll see an error right here that says that adjacent JSX elements must be wrapped in an 
+enclosing tag. React always wants to render a single component. So we could wrap this in say a div. Make this the parent of both of the Header and the Main and now we can see that 
+this has been added. But we also could do something like this. We might want to create a function called App and the app is going to be responsible for rendering both the Main 
+component and the Header. So that's going to look like this. We'll say div, we'll close that div. We will add a Header. And we'll add a Main. So instead of rendering our div here, 
+let's render the App and check it out, we got the same output. Nice, so again, a component is just a function that returns some JSX. It returns a bit of our user interface and then 
+we can use the ReactDOM.render function to render that component using this JSX syntax.
+ -->

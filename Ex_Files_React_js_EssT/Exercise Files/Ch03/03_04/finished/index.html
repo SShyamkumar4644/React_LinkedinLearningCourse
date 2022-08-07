@@ -1,3 +1,4 @@
+<!--Adding keys to list items-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -30,8 +31,23 @@
             <ul>
               {props.dishes.map((dish) => (
                 <li key={dish.id}>
-                  {dish.title}
+                  {dish.title} 
                 </li>
+                // And that's because it's finding an object with a couple of keys, 
+                // instead of flat values. So let's scroll up a little bit further.
+                // We're still using dishes, but now what we want to do is this,
+                // we'll say dish.title, we'll remove this key here, and then we'll
+                // say dish.id. So you might be thinking, isn't this the same, 
+                // because we're just using an index again? Not really, because 
+                // the data is actually stable. We've created it using this 
+                // function instead of being created while the list items are 
+                // being rendered. Another thing to think about is that your
+                // data already might look like this, so you could just use an ID or 
+                // another unique field if you are already dealing with an array of objects. 
+                // Keys help keep your data in sync as your application state changes over time,
+                // so this is why it's really important to add them anytime you're trying to 
+                // iterate over something and return a dynamic value.
+
               ))}
             </ul>
           </section>
@@ -57,7 +73,17 @@
           id: i,
           title: dish
         })
-      );
+      );// So something we could do is perform a little data transformation, 
+      // which we'll do here on line 53. So we're going to go ahead and create an 
+      // array of objects. So we'll call this Dish Objects, and we'll set that equal 
+      // to dishes.map for each item in our dishes array. We want to create an object,
+      // and the reason for that is because each one of these should have an ID. 
+      // So we'll say ID is i, and then the title is dish, so whatever the value of this 
+      // dish is. Now, something to point out here is that whenever we 
+      // are returning an object from an arrow function, we need to point that 
+      // arrow function at a set of parentheses, instead of just pointing it directly at these curly braces. So let's give it a save, this should create these objects. We're going to see though, that nothing much changes, because we need to add dish objects as our value for dishes. 
+      // As soon as I do that, I have exploded my app, which is okay.
+      
 
       function App() {
         return (
@@ -81,3 +107,5 @@
     </script>
   </body>
 </html>
+
+<!---->
