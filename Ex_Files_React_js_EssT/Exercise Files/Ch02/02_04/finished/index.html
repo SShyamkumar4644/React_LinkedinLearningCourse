@@ -2,23 +2,48 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <title>React ⚛️</title>
   </head>
   <body>
-      <div id="root"></div>
-      
-      <script type="text/babel">
-        ReactDOM.render(
-          <ul>
-            <li>🤖</li>
-            <li>🤠</li>
-            <li>🌝</li>
-          </ul>,
-          document.getElementById("root")
-        );
-      </script>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      ReactDOM.render(
+        <ul>
+          <li>🤖</li>
+          <li>🤠</li>
+          <li>🌝</li>
+        </ul>,
+        document.getElementById("root")
+      );
+    </script>
   </body>
 </html>
+
+<!--The fastest way to get started with this is to use another one of these CDN 
+Links. And I'm going to add this here. If you want to grab the link, you can 
+always grab it from the finished file. But we're going to find this at 
+unpkg.com/babel-standalone@6/babel.min.js. .min just means that it's 
+been minified for the browser so that it will work a little bit more quickly. 
+And then the other thing that we need to do, we're still noticing if I refresh this 
+that we have that syntax error, the thing we need to do to fix this is instead of 
+using text javascript, we need to use text/babel. Babel is going to go through any 
+of the script tags that have text Babel and it's going to transform any of these 
+tags that don't work in the browser to those create element calls that do. Something
+we're seeing here in our console is that it says you're using the in browser Babel 
+transformer. Be sure to compile your scripts for production. So this is not the most 
+optimized way of working with Babel, but it's going to get us started quickly by 
+just using this to transform this in the browser. Later in the course we'll be using
+other tools that are going to handle all of this before the code even gets to the 
+browser. So that's Babel, in addition to being used for JSX, it's also used for the 
+most modern JavaScript syntax so that we don't have to wait to use these awesome 
+new features-->

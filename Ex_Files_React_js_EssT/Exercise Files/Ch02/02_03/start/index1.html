@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <title>React ⚛️</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/javascript">
+      let ul = React.createElement(
+        "ul",
+        null,
+        {style: {color: "blue"}},
+        React.createElement("li", null, "Monday"),
+        React.createElement("li", null, "Tuesday"),
+      );
+
+      ReactDOM.render(
+        ul,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
+
+<!--The first thing I want to do here is 
+change our heading to an unordered list. So we're
+going to make this a ul, a bullet list, and now how would 
+I add different child elements like list items to this? Well
+, all I need to do for this third argument that we send to 
+React.createElement. Remember, this is what we want to create.
+This is any properties that we want to send. So for example,
+I could say like style, color, blue. And then this should 
+make it that color. Let's add our child elements first. 
+We'll say list item, null and Monday here. And now we should
+see this style has been applied number one, so our 
+properties have been injected so we also have this 
+createElement called creating a list item. What is a list 
+if it only has one item? We can add to it, Monday, Tuesday, 
+Wednesday and now we have all of these being rendered. As our
+user interface becomes more complex, as we have more createElement calls on the page, our code starts to get a little hectic. And by that I just mean that every single element that I would need to create has to have its own createElement call. So what we want is some sort of a helper, some sort of a syntax to come fix this for us and that helper is called JSX. JSX or JavaScript as XML is an HTML-like syntax for creating UI elements. So instead of having to use all of these createElement calls, and I'm going to replace the ul here to make this work, 
+we're going to just use tags. 
+NEXT EXPLAINED IN INDEX.HTML AT FINISHED FOLDER-->

@@ -2,18 +2,40 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
     <title>React ⚛️</title>
   </head>
   <body>
-      <div id="root"></div>
-      
-      <script type="text/javascript">
-          ReactDOM.render(
-              React.createElement("h1", null, "Getting Started!"),
-              document.getElementById("root")
-          );
-      </script>
+    <div id="root"></div>
+  
+    <script type="text/javascript">
+      ReactDOM.render(
+        React.createElement("h1", null, "Getting Started!"),
+        document.getElementById("root")
+      );
+    </script>
   </body>
 </html>
+
+<!--Now, the next thing I'll do is I'll add to this page a script tag,
+and we're going to say type text slash JavaScript. And then here I'm going
+to type reactDom.render. Now reactDom.render is one of the most important functions
+in the react Dom library. It's going to take in two different arguments. The first of the arguments that we'll send to
+this function is react.createelement. And we're going to use this to create an
+element to add to the page. Instead of using this h1 here I want to create the same
+thing using react. So we'll say h1 is the type of element I want to create.
+Null is the second argument that will pass here because we don't want to pass
+any properties to this element. And then finally, we want to mimic this h1 fully
+by writing getting started with react, perfect. So now check this out.
+This is our first argument that we're going to send. We're going to follow that with a comma and then we'll say document.getElementbyId route.
+So to reactDom.render, we're sending two things. The first is the element we want
+to create. The second is where we want to put this. So we're saying, take this
+element and put it right here inside of this div. So we're going to give that a save. We also need to refresh our page over here,
+and we'll notice that we're getting two different outputs here.-->
