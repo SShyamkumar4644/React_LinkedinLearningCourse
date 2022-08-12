@@ -1,0 +1,13 @@
+One of the tools that you can use to deploy your react application is Netlify. So let's go ahead and log in. You can log in with your GitHub account, 
+GitLab, Bitbucket. You can create your own account with your email address. I'm just going to go ahead and log in with GitHub here. And since I'm logged in, 
+it should pop me into this window and I'm going to click on add new site. So one of the options here is import an existing project. You could connect to your 
+Git provider if you've already uploaded your project here that's kind of a quick way of getting started. But since we don't have GitHub set up for this particular 
+project, I'm going to select deploy manually. What Netlify is looking for in this drag and drop window is the built version of our project. So let me show you 
+how to do that. We're going to make sure that we're navigated to the finished react app location and we're going to run NPM run build. This is going to create 
+a production build for our application, meaning that this will be optimized for production. It will have everything ready to go. This will generate what's called 
+the build folder here. So what I can do inside of react app finished, is I can drag the build folder to this location. So, this will create a nice little URL for
+me. It's also going to build my project. So if I open this up in a new tab, check it out, we see our awesome website. So Netlify is a free tool that you can 
+use to deploy a react application quickly and they make it kind of fun to work with because we can just drag and drop our project. And then we're ready to go 
+right away. Now, from here you can customize all sorts of things. You could set up a custom domain, you could set up HTTPS support, but for now we should see 
+our project running and it's running at this link.
+
