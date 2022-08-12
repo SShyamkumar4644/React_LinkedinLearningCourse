@@ -1,3 +1,4 @@
+// Configuring the Router
 import "./App.css";
 
 function Home() {
@@ -27,3 +28,5 @@ export function Contact() {
 export function App() {
   return <Home />;
 }
+
+//Notes are in index.js file
