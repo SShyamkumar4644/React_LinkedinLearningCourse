@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 
@@ -39,8 +39,11 @@ import './App.css';
 //   );
 // }
 
- function App({library}){
+function App(){
   const [emotion, setEmotion] = useState("happy");
+  useEffect(() => {
+    console.log(`It's ${emotion} around here!`);
+  }, [emotion]);
   
   return(
     <div className="App">
@@ -51,4 +54,4 @@ import './App.css';
   );
  }
 
-export default App;
+ export default App;
