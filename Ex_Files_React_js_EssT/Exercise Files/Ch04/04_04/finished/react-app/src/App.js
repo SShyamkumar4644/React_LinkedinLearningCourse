@@ -5,24 +5,37 @@ import { useState } from "react";
 // Managing state in a React application is really important and the most modern way to handle state variables 
 // in an app is to use a function called useState.
 function App() {
+  //Step 3
   const [emotion, setEmotion] = useState("happy");
+  
+
+  //Step 1
+  // const what = useState();
+  // console.log(what);
+// But what we will actually want to do here is we want to, on line five, use this value called what 
+// and we're using the what value to figure out what does useState return? When I call this state function, 
+// what is actually being returned? So what we see here, if we hit Refresh to clear out those older logs, we 
+// see an array. This array has two values. The first is an undefined value. And then the second is a function. 
+// So we want to think about this undefined value as being the state value currently when we run the app for the 
+// first time, when we render our app component. The second value here is a function that we're going to use to update the state. 
+
+//Step 2
+// const what = useState("happy");
+// console.log(what);
+// o how do I set an initial state for this app? Well, I'm going to set it by passing a value to this useState function. 
+// Check it out. The first value now is happy
+
 // Well, I'm going to set it by passing a value to this useState function. Check it out. 
 // The first value now is happy. Now, how do I assign some sort of a name to this value? 
 // We know from before that we can use array destructuring to do just this. So what we're 
 // going to do here on line five is we'll create a value for a state called emotion. Then we're 
 // going to create an updating function called setEmotion. Now, when my app first renders, the state will be happy. 
 
-  return (
+  return ( // Step 4
     <div className="App">
-      <h1>Current emotion is {emotion}</h1>
-      <button onClick={() => setEmotion("sad")}>
-        Sad
-      </button>
-      <button
-        onClick={() => setEmotion("excited")}
-      >
-        Excited
-      </button>
+    <h1>Current emotion is {emotion}</h1>
+    <button onClick={() => setEmotion("sad")}>Sad</button>
+    <button onClick={() => setEmotion("excited")}>Excited</button>
     </div>
     // The second thing we want to do is call this setEmotion function to change the state. We need to have this respond to some sort of user input. 
     // So I'm going to call this button sad. We're going to hit the sad button. So now I'm going to add to this an onClick method so I can change the 
@@ -33,13 +46,6 @@ function App() {
 }
 
 export default App;
-
-// But what we will actually want to do here is we want to, on line five, use this value called what 
-// and we're using the what value to figure out what does useState return? When I call this state function, 
-// what is actually being returned? So what we see here, if we hit Refresh to clear out those older logs, we 
-// see an array. This array has two values. The first is an undefined value. And then the second is a function. 
-// So we want to think about this undefined value as being the state value currently when we run the app for the 
-// first time, when we render our app component. The second value here is a function that we're going to use to update the state. 
 
 // Remember that you can use this for all sorts of new emotions if you wanted to. 
 // Let's say excited. We'll set the emotion to excited. And now when I click the 

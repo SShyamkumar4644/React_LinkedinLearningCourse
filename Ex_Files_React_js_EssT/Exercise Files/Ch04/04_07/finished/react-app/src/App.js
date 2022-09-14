@@ -3,10 +3,7 @@ import "./App.css";
 import { useReducer } from "react";
 
 function App() {
-  const [checked, setChecked] = useReducer(
-    (checked) => !checked,
-    false
-  );
+  const [checked, setChecked] = useReducer((checked) => !checked, false);
   // And by a little better, I mean it would be cool if we could extract this functionality 
   // into a separate function so that we don't have to manage this inside of our onChange. 
   // So, let's go ahead and change this. And the change we'll make is to use a different hook, 
@@ -45,3 +42,19 @@ export default App;
 // and the initial state is false. We're going to use this checked value to manage the state of the checkbox, so we want to use value here. 
 // And now every time I change the status, I want this to change the output. So, we're going to call onChange, we will call setChecked, 
 // and then we'll take a look at whatever the value of checked is and we will return the opposite. 
+
+//before using useReducer
+
+// function App(){
+//   const [checked, setChecked] = useState(false);
+//   return(
+//     <div className="App">
+//       <input type="checkbox" 
+//       value={checked} 
+//       onChange={() => 
+//       setChecked((checked) => !checked)}/>
+//       <label> {checked ? "checked" : "not checked"} </label>
+//     </div>
+
+//   );
+// }
