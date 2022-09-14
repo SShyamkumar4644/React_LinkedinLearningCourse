@@ -76,15 +76,24 @@
               year={new Date().getFullYear()}
             />
           </React.Fragment>
-          // In an earlier video, we saw how it was important to wrap any sibling components inside of div because
-          // we saw that error saying that adjacent JSX elements must be wrapped in an enclosing tech. So we're seeing how
-          // React only wants to render that single component but we're seeing here how adding a div if we're constantly adding wrappers 
-          // to the page this can start to junk up our elementary. We're seeing there's a div here with root and then another div. And then we 
-          // start to get to the actual components that are on the page. Now, something to keep in mind is that instead of using a div, you can use
-          // what's called a React Fragment. We can add this by using React.Fragment. We can see that our div root is wrapping directly around the header,
-          // this section in the footer that we've created with these components. It's also possible to use an even shorter syntax for this but we have
-          // to make sure that we're using specific versions of React. So for now, we're going to keep React.Fragment but later I'll show you how to
-          // remove React.Fragment and just use this really shorthand syntax. But for now, just know that React.Fragment will not add anything to
+          // In an earlier video, we saw how it was important to wrap any 
+          // sibling components inside of div because
+          // we saw that error saying that adjacent JSX elements must be wrapped
+          // in an enclosing tech. So we're seeing how
+          // React only wants to render that single component but we're seeing 
+          // here how adding a div if we're constantly adding wrappers 
+          // to the page this can start to junk up our elementary. We're seeing 
+          // there's a div here with root and then another div. And then we 
+          // start to get to the actual components that are on the page. Now, 
+          // something to keep in mind is that instead of using a div, you can use
+          // what's called a React Fragment. We can add this by using React.Fragment. 
+          // We can see that our div root is wrapping directly around the header,
+          // this section in the footer that we've created with these components. 
+          // It's also possible to use an even shorter syntax for this but we have
+          // to make sure that we're using specific versions of React. So for now, 
+          // we're going to keep React.Fragment but later I'll show you how to
+          // remove React.Fragment and just use this really shorthand syntax. 
+          // But for now, just know that React.Fragment will not add anything to
           // the DOM but it will allow you to render these sibling components with ease
         );
       }

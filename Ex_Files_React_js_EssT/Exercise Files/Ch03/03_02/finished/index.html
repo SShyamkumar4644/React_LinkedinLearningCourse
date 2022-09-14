@@ -58,14 +58,27 @@
   </body>
 </html>
 
-<!--In the previous video we created some components. In this video, let's take a look at how we can use components to display dynamic data. 
-Our restaurant is cool in everything but do you really want to display my name? Of course not. No way. You probably want to display your own name. 
-So let's go ahead and do that. To start, we're going to pass an object called props into our header function. Then before our return statement, we're going to console.log(props) 
-to see what we get. So if we hit refresh and we open up our console, couple ways to do that Command + Option + J or Control + Shift + J on the PC, or you can right click, 
-click inspect and then you'll get to the elements. And then you could go to the console. This is going to display an object. Right now this object has nothing in it. 
-To add values to this component, we'll need to add them wherever the component is being rendered. So right here on line 41 is where we would do that. We could say name 
-equals and then you can put your own name in here. Let's say your name is Cindy. Now, if we refresh, we should see an object with that name. Now to access these values 
-we would just go ahead and grab them from the props object. So here we could use another one of these JSX expressions and we'd say {props.names}'s Kitchen. And there we go. 
+<!--In the previous video we created some components. In this video,
+let's take a look at how we can use components to display dynamic data. 
+Our restaurant is cool in everything but do you really want to display 
+my name? Of course not. No way. You probably want to display your own name. 
+So let's go ahead and do that. To start, we're going to pass an object 
+called props into our header function. Then before our return statement, 
+we're going to console.log(props) 
+to see what we get. So if we hit refresh and we open up our console, couple
+ways to do that Command + Option + J or Control + Shift + J on the PC, or 
+you can right click, 
+click inspect and then you'll get to the elements. And then you could go to 
+the console. This is going to display an object. Right now this object has nothing in it. 
+To add values to this component, we'll need to add them wherever the 
+component is being rendered. So right here on line 41 is where we would 
+do that. We could say name 
+equals and then you can put your own name in here. Let's say your name 
+is Cindy. Now, if we refresh, we should see an object with that name. 
+Now to access these values 
+we would just go ahead and grab them from the props object. So here we 
+could use another one of these JSX expressions and we'd say {props.names}'s 
+Kitchen. And there we go. 
 Cindy's kitchen is now being added.
           <script type="text/babel">
                 function Header(props) {
