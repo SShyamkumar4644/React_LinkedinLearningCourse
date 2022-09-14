@@ -80,6 +80,15 @@ export default App;
 
 // export default App;
 // After MODIFYING TWO FILES OUTPUT: HELLO FROM REACT
+//EXPLNATION FOR STEP 1
+//A really important JavaScript concept that we want to know about is destructuring. 
+//So this is going to help us get ready to deal with state in our application. Now, we 
+//saw how passing properties to any component, we would just do so wherever the component 
+//was rendered. On line nine here, we could add a property called library. We could set this to 
+//say react. Now, if we go back to our app.js file, instead of just hard coding this, we're going 
+//to grab this from our props object. So we could say props.library and then we should see this being 
+//rendered here in our browser. So, let's make sure that this is working. We'll say GraphQL and this 
+//should re-render that. 
 
 //STEP 2
 // function App({library}){

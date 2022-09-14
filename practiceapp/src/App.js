@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -38,20 +38,15 @@ import './App.css';
    
 //   );
 // }
-// const cities = ["Tokyo","Tahoe City", "Bend"];
-// console.log(cities[0]); // Tokyo 
-const [firstCity, second] = [
-  "Tokyo", // firstCity pointing to tokyo
-  "Tahoe City",// second pointing to tahoe city
-  "Bend"// So what we're doing with array destructuring, is we are 
-  // assigning a variable name based on a position in the array.
-];
-console.log(firstCity);
-console.log(second);
+
  function App({library}){
+  const [emotion, setEmotion] = useState("happy");
+  
   return(
-    <div className='App'>
-      <h1>Hello from {library}</h1>
+    <div className="App">
+    <h1>Current emotion is {emotion}</h1>
+    <button onClick={() => setEmotion("sad")}>Sad</button>
+    <button onClick={() => setEmotion("excited")}>Excited</button>
     </div>
   );
  }
