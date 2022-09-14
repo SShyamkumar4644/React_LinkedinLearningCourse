@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useReducer } from 'react';
 import './App.css';
 
 
@@ -39,19 +39,20 @@ import './App.css';
 //   );
 // }
 
-function App(){
-  const [emotion, setEmotion] = useState("happy");
-  useEffect(() => {
-    console.log(`It's ${emotion} around here!`);
-  }, [emotion]);
-  
-  return(
+function App() {
+  const [checked, setChecked] = useReducer((checked) => !checked, false);
+  return (
     <div className="App">
-    <h1>Current emotion is {emotion}</h1>
-    <button onClick={() => setEmotion("sad")}>Sad</button>
-    <button onClick={() => setEmotion("excited")}>Excited</button>
+      <input
+        type="checkbox"
+        value={checked}
+        onChange={setChecked}
+      />
+      <label>
+        {checked ? "checked" : "not checked"}
+      </label>
     </div>
   );
- }
+}
 
- export default App;
+export default App;
