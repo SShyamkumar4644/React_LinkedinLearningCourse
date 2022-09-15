@@ -111,4 +111,126 @@
   </body>
 </html>
 
-<!---->
+<!--
+  STEP 1
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React ⚛️</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Header(props) {
+        return (
+          <header>
+            <h1>{props.name}'s Kitchen</h1>
+          </header>
+        );
+      }
+
+      const dishes = [
+        "Black Bean Soup",
+        "Macaroni and Cheese",
+        "Salmon and Potatoes"
+      ];
+
+      const dishObjects = dishes.map(
+        (dish, i) => ({
+          id: i,
+          title: dish
+        })
+      );
+
+      function Main(props) {
+        return (
+          <section>
+            <ul>
+              {props.dishes.map((dish) => (
+                <li key={dish.id}>
+                  {dish.title} 
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      }
+
+
+      function Footer(props) {
+        return (
+          <footer>
+            <p>Copyright {props.year}</p>
+          </footer>
+        );
+      }
+
+      function App() {
+        return (
+          <div>
+            <Header name="Cindy" />
+            <Main adjective="delicious"
+            dishes={dishes} />
+            <Footer year={new Date().getFullYear()} />
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
+//EXPLNATION FOR STEP 1
+In the previous video, we rendered a list of menu items dynamically. 
+So if we added another item to our list, say pizza, we would see that 
+this is dynamically added anytime we hit refresh over here. We also 
+noticed that there was a warning that was popping up in our console, 
+letting us know that every child in a list had to have a unique key 
+property. So the reason that this appears is that it's possible that 
+things might get out of sync when rendering occurs, particularly if 
+something is added to the front of that list, or somewhere in the middle. 
+Think of a key as being an ID that keeps everything in sync. And it's 
+JavaScript, right? So of course, there are a couple ways of handling this. 
+First, we could just add an index. So here, when we're iterating over our 
+dishes array, we could add i as an iterator and then we can add a key of i 
+to each one of our dishes, and that will clear the warning. The react docs 
+do recommend against this though, because there still can be problems with 
+rendering, which is kind of not the point of keys in the first place. 
+So something we could do is perform a little data transformation, which 
+we'll do here on line 53. So we're going to go ahead and create an array 
+of objects. So we'll call this Dish Objects, and we'll set that equal to 
+dishes.map for each item in our dishes array. We want to create an object, 
+and the reason for that is because each one of these should have an ID. So 
+we'll say ID is i, and then the title is dish, so whatever the value of this 
+dish is. Now, something to point out here is that whenever we are returning 
+an object from an arrow function, we need to point that arrow function at a 
+set of parentheses, instead of just pointing it directly at these curly braces. 
+So let's give it a save, this should create these objects. We're going to see though, 
+that nothing much changes, because we need to add dish objects as our value for 
+dishes. As soon as I do that, I have exploded my app, which is okay. And that's 
+because it's finding an object with a couple of keys, instead of flat values. 
+So let's scroll up a little bit further. We're still using dishes, but now what 
+we want to do is this, we'll say dish.title, we'll remove this key here, and 
+then we'll say dish.id. So you might be thinking, isn't this the same, because 
+we're just using an index again? Not really, because the data is actually 
+stable. We've created it using this function instead of being created while 
+the list items are being rendered. Another thing to think about is that your 
+data already might look like this, so you could just use an ID or another 
+unique field if you are already dealing with an array of objects. Keys help 
+keep your data in sync as your application state changes over time, so this is 
+why it's really important to add them anytime you're trying to iterate over 
+something and return a dynamic value.
+
+-->

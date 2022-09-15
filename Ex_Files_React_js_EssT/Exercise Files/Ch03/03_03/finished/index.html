@@ -109,3 +109,110 @@ Hiding inside of our console here, we have a warning. So it says each
 child in a list should have a unique key property. So in the next video, 
 we're going to fix this.
 -->
+
+<!--
+  STEP 1
+
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>React ⚛️</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      function Header(props) {
+        return (
+          <header>
+            <h1>{props.name}'s Kitchen</h1>
+          </header>
+        );
+      }
+
+      const dishes = [
+        "Black Bean Soup",
+        "Macaroni and Cheese",
+        "Salmon and Potatoes"
+      ];
+
+      function Main(props) {
+        return (
+          <section>
+            <ul>
+              {props.dishes.map((dish) => (
+                <li>{dish}</li>
+              ))}
+            </ul>
+          </section>
+        );
+      }
+
+      function Footer(props) {
+        return (
+          <footer>
+            <p>Copyright {props.year}</p>
+          </footer>
+        );
+      }
+
+      function App() {
+        return (
+          <div>
+            <Header name="Cindy" />
+            <Main adjective="delicious"
+            dishes={dishes} />
+            <Footer year={new Date().getFullYear()} />
+          </div>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
+//EXPLANATION FOR STEP 1
+ So far we've passed properties into components in a few different ways. 
+ We've used strings like Cindy and amazing. We used this little date function. 
+ We also saw how we used a number, you could pass true or false. All of these 
+ are going to be past via these JSX expressions. Only strings are going to be 
+ wrapped in quotes. But what happens if we have a different data type? Something 
+ a little bit more complex, like an array? Well, let's go ahead and create an 
+ array and try it out. So, first things first, we're going to, on line 46 here, 
+ create a list of dishes at our restaurant. So we could add Black Bean Soup. 
+ We could add Macaroni and Cheese and then we could add Salmon and Potatoes. 
+ Perfect. Remember, this is your restaurant, so obviously put your own favorite 
+ foods on your own list. Don't let me tell you how to run your restaurant here. 
+ Now, if we wanted to display this list inside of our main component, we would
+need to map over it. So, let's go ahead and collapse our footer here. And then 
+we're going to inside of this section, let's go ahead and replace our paragraph 
+with an unordered list. We're going to say that this UL should inside of this, 
+we're going to map over the dishes. So we'll say dishes.map. Then for each dish,
+ we want to return a list item. And this list item should look like this. In it 
+ we should add a dish. So let's see what we get. At the moment, dishes is just 
+ referencing this global variable called const dishes. So we can still render 
+ all of these values. Now, I actually want to access these values via props 
+ though, right? So it's going to, it's going to be up to me to pass these 
+ dishes in this way. So we'll say dishes=dishes. Now this property, we can 
+ reference off of props.dishes and we should see the same output. So this 
+ is working as we expect.
+-->
+
+<!--
+  STEP 2
+
+  Hiding inside of our console here, we have a warning. So it says each 
+  child in a list should have a unique key property. So in the next video,
+  we're going to fix this.
+
+-->
