@@ -1,58 +1,31 @@
-// Nesting links with React Router v6
+import { useEffect, useState } from "react";
 import "./App.css";
-import { Link, Outlet } from "react-router-dom";
 
-function Home() {
-  return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/history">History</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
-      <h1>My Website</h1>
+// const cities = ["Tokyo", "Tahoe", "Bend"]
+// console.log(cities[0]);
+function App(){
+  // const what = useState("haey5y");
+  // console.log(what);
+  const [emotion, setEmotion] = useState("happy")
+  const [secondary, setSecondary] = useState("tired")
+  useEffect(() =>{
+    console.log(`It's ${emotion} around here`);
+  }, [emotion])
+  useEffect(() =>{
+    console.log(`It's ${secondary} around here`);
+  }, [secondary])
+
+  return(
+    <div className="App">
+     <h1>Current emotion is {emotion}</h1>
+     <button onClick={() => setEmotion("sad")}>Sad</button>
+     <button onClick={() => setEmotion("excited")}>Excited</button>
+     <h2>
+      Current secondary emotion is {secondary}
+     </h2>
+     <button onClick={() => setSecondary("grateful")}>Grateful</button>
     </div>
   );
 }
 
-export function About() {
-  return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="history">History</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
-      <h1>About Us</h1>
-      <Outlet />
-    </div>
-  );
-}
-
-export function History() {
-  return (
-    <div>
-      <h1>Our History</h1>
-    </div>
-  );
-}
-
-export function Contact() {
-  return (
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="history">History</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
-      <h1>Contact Us</h1>
-    </div>
-  );
-}
-
-export function App() {
-  return <Home />;
-}
+export default App;

@@ -1,3 +1,4 @@
+<!--Working with JSX syntax-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,12 +16,12 @@
   </head>
   <body>
     <div id="root"></div>
-
     <script type="text/babel">
       function Header(props) {
+        // console.log(props);
         return (
           <header>
-            <h1>{props.name}'s Kitchen</h1>
+            <h1>{props.name}'s kitchen</h1>
           </header>
         );
       }
@@ -28,30 +29,26 @@
       const dishes = [
         "Black Bean Soup",
         "Macaroni and Cheese",
-        "Salmon and Potatoes"
+        "Salmon and Potatoes",
       ];
 
-      const dishObjects = dishes.map(
-        (dish, i) => ({
-          id: i,
-          title: dish
-        })
-      );
+      const dishObjects = dishes.map((dish, i) => ({
+        id: i,
+        title: dish,
+      }));
 
       function Main(props) {
         return (
           <section>
+            <img height="200" src="./restaurant.jpeg" alt="" />
             <ul>
               {props.dishes.map((dish) => (
-                <li key={dish.id}>
-                  {dish.title} 
-                </li>
+                <li key={dish.id}>{dish.title}</li>
               ))}
             </ul>
           </section>
         );
       }
-
 
       function Footer(props) {
         return (
@@ -63,12 +60,11 @@
 
       function App() {
         return (
-          <div>
+          <React.Fragment>
             <Header name="Cindy" />
-            <Main adjective="delicious"
-            dishes={dishObjects} />
+            <Main adjective="delicious" dishes={dishObjects} />
             <Footer year={new Date().getFullYear()} />
-          </div>
+          </React.Fragment>
         );
       }
 
