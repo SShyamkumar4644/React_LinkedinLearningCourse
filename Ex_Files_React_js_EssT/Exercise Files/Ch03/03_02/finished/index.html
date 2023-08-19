@@ -185,15 +185,63 @@ Cindy's kitchen is now being added.
 </html>
 
 //EXPLNATION FOR STEP 1
-In the previous video we created some components. In this video, let's take a look at how we can use 
-components to display dynamic data. Our restaurant is cool in everything but do you really want to 
-display my name? Of course not. No way. You probably want to display your own name. So let's go ahead
-and do that. To start, we're going to pass an object called props into our header function. Then 
-before our return statement, we're going to console.log(props) to see what we get. So if we hit 
-refresh and we open up our console, couple ways to do that Command + Option + J or Control + Shift + J on 
-the PC, or you can right click, click inspect and then you'll get to the elements. And then you could go 
-to the console. This is going to display an object. Right now this object has nothing in it. To add values 
-to this component, we'll need to add them wherever the component is being rendered.
+In the previous video we created some components. 
+
+In this video, let's take a look at how we can use components to display dynamic data. 
+Our restaurant is cool in everything but do you really want to display my name? Of course not. No way. 
+
+You probably want to display your own name. So let's go ahead and do that. To start, we're going to pass 
+an object called props into our header function. Then before our return statement, we're going to console.log(props) 
+to see what we get. So if we hit refresh and we open up our console, couple ways to do that Command + Option + J or Control + Shift + J on 
+the PC, or you can right click, click inspect and then you'll get to the elements. 
+
+And then you could go to the console. This is going to display an object. 
+
+Right now this object has nothing in it. To add values to this component, we'll need to add them wherever the component is being rendered.
+
+ChatGPT Explained:
+Certainly, here's the provided information organized into bullet points:
+
+- Using Components to Display Dynamic Data:
+  - Components can be used to display dynamic data, making the user interface more personalized and adaptable.
+
+- Example: Changing Displayed Name:
+  - In the example scenario, the restaurant's name ("Eve's Kitchen") is being discussed.
+  - Instead of displaying a static name, the goal is to allow users to display their own name.
+
+- Introducing Props:
+  - To achieve dynamic data display, a concept called "props" (short for properties) is used.
+  - Props are objects containing data that is passed from a parent component to a child component.
+
+- Passing Props to the `Header` Component:
+  - In the `Header` component, an object called `props` is passed as an argument.
+  - This object will contain the dynamic data to be displayed.
+
+- Inspecting Props:
+  - To inspect the `props` object, a `console.log(props)` statement is added within the `Header` component.
+  - Refreshing the page and opening the browser console will reveal the logged `props` object.
+
+- Accessing Props Data:
+  - The `props` object contains data that needs to be added when rendering the component.
+  - This data can include information like the user's name.
+
+- Rendering Components with Props:
+  - The data stored in the `props` object is passed to the component when rendering it.
+  - This allows for dynamic content based on the provided data.
+
+- Viewing the Console:
+  - To open the console in the browser:
+    - On Mac: Use Command + Option + J.
+    - On PC: Use Control + Shift + J.
+    - Alternatively, right-click and choose "Inspect," then navigate to the console tab.
+
+- Initial `props` Object:
+  - Initially, the `props` object will be empty until data is added when rendering the component.
+
+In summary, components can display dynamic data using props. Props are objects containing information 
+passed from parent to child components. The `props` object is accessible within the component and allows 
+for customization and personalization of the displayed content.
+
 -->
 
 <!--
@@ -250,15 +298,54 @@ to this component, we'll need to add them wherever the component is being render
 // Output: 
 Cindy's Kitchen
 We serve the most food around.
+
 //EXPLNATION FOR STEP 2
-Right now this object has nothing in it. To add values to this component, 
-we'll need to add them wherever the component is being rendered. So right 
-here on line 41 is where we would do that. We could say name equals and 
-then you can put your own name in here. Let's say your name is Cindy. 
-Now, if we refresh, we should see an object with that name. Now to access 
+Right now this object has nothing in it. 
+
+To add values to this component, we'll need to add them wherever the component is being rendered. So right 
+here on line 41 is where we would do that. 
+
+We could say name equals and then you can put your own name in here. 
+
+Let's say your name is Cindy. Now, if we refresh, we should see an object with that name. Now to access 
 these values we would just go ahead and grab them from the props object. 
+
 So here we could use another one of these JSX expressions and we'd say 
 {props.names}'s Kitchen. And there we go. Cindy's kitchen is now being added.
+
+ChatGPT Explained:
+Sure, here's the information presented in bullet points:
+
+- Empty Initial `props` Object:
+  - Initially, the `props` object is empty when logged.
+  - To display values, data needs to be added to the component when it's rendered.
+
+- Adding Values to Components:
+  - Values are added to a component when it's rendered in the parent component.
+  - In this example, values are added to the `Header` component when it's being rendered.
+
+- Rendering Components with Data:
+  - Values are passed to the component as attributes (props).
+  - For instance, in line 41, `name` is added as a prop with a specific value (e.g., "Cindy").
+
+- JSX Expression to Access Props:
+  - To access and display the prop values, JSX expressions are used.
+  - Inside the `Header` component, `{props.name}'s Kitchen` is used to dynamically generate the content.
+
+- Result:
+  - After rendering with the `name` prop, the component displays the personalized content based on the passed value.
+
+- Using JSX Expressions:
+  - JSX expressions are enclosed in curly braces `{}` within JSX code.
+  - They allow dynamic insertion of values or expressions into the JSX content.
+
+- Rendering Dynamic Content:
+  - By passing different values as props, you can render dynamic content tailored to each instance of the component.
+
+In summary, values are added to components when rendering them in parent components. 
+Props allow dynamic data to be passed to components, enabling personalization and 
+customization of the displayed content. JSX expressions are used to access and 
+display prop values within the component's JSX code.
 
 -->
 
@@ -323,27 +410,78 @@ So here we could use another one of these JSX expressions and we'd say
     </script>
   </body>
 </html>
+
 //EXPLANATION FOR STEP 3
+
 So let's go ahead and add a dynamic property to our main component. 
-So the main component also has access to our props object. Right now 
-we are displaying delicious food but we can say {props.adjective} food. 
-And now in the main component we'll say adjective equals amazing. And 
-now this should inject that right into that component. Let's also add 
-a period there. All right, cool. Let's add one more property. And we're 
-going to add that one more property to our new component, which we'll 
-call footer. And the footer component is going to return a footer. So 
-a footer tag. And within that footer tag, we want to use another type 
-here. So we'll say p copyright props.year. Now what we can do if we 
-scroll down a little bit further is we can render our footer inside 
-of our app component. And so far we've just used strings. So far we've 
-used strings as properties. Let's say we wanted to use a number. We 
-would need to wrap this in a set of curly braces. So let's go ahead 
-and refresh that. And we'll see that added here. You also could make 
-this a little more dynamic by adding a function. You could use something 
-like {new Date.getFullYear} and this will just add whatever the current 
+So the main component also has access to our props object. 
+
+Right now we are displaying delicious food but we can say {props.adjective} food. 
+And now in the main component we'll say adjective equals amazing. 
+
+And now this should inject that right into that component. 
+
+Let's also add a period there. All right, cool. Let's add one more property. 
+
+And we're going to add that one more property to our new component, which we'll 
+call footer. And the footer component is going to return a footer. 
+
+So a footer tag. And within that footer tag, we want to use another type 
+here. So we'll say p copyright props.year. 
+
+Now what we can do if we scroll down a little bit further is we can render our footer inside 
+of our app component. And so far we've just used strings. 
+
+So far we've used strings as properties. Let's say we wanted to use a number. We 
+would need to wrap this in a set of curly braces. 
+
+So let's go ahead and refresh that. And we'll see that added here. 
+
+You also could make this a little more dynamic by adding a function. 
+
+You could use something like {new Date.getFullYear} and this will just add whatever the current 
 year is. Pretty cool. So we want to think about the props object as being 
 this little container where you can place information in for any component. 
+
 When we render the component, we'll pass the properties into the component. 
 And then within that component, we'll reference them in the props object 
 with dot notation.
+
+ChatGPT Explained:
+
+Certainly, here's the information provided in bullet points:
+
+- Adding Dynamic Property to the `Main` Component:
+  - The `Main` component also has access to the `props` object.
+  - To add dynamic content, a new property called `adjective` is introduced to the `Main` component.
+
+- Displaying Dynamic Content in the `Main` Component:
+  - The text "delicious food" is updated to display `{props.adjective} food`.
+  - The `adjective` value can be customized when rendering the `Main` component.
+
+- Example of Adding Property to the `Footer` Component:
+  - A new component named `Footer` is introduced, returning a `<footer>` tag.
+  - Within the `<footer>`, a `<p>` element displays `copyright props.year`.
+
+- Rendering the `Footer` Component:
+  - The `Footer` component is rendered within the `App` component using JSX.
+
+- Using Different Property Data Types:
+  - Properties can hold various types of data, including strings and numbers.
+  - To use a numeric property, it should be wrapped in curly braces `{}`.
+
+- Adding Dynamic Year with a Function:
+  - To display the current year dynamically, a function can be used within the property.
+  - For example, `{new Date().getFullYear()}` will show the current year.
+
+- `props` Object Usage:
+  - The `props` object serves as a container for passing information to any component.
+  - When rendering a component, the properties are passed in, and they can be accessed within the component using dot notation (`props.propertyName`).
+
+In summary, dynamic content can be added to components using props. Properties can hold 
+different data types and can be customized when rendering the component. 
+The `props` object acts as a container for passing information to components, and 
+the data within it can be accessed using dot notation. This allows for dynamic and 
+personalized user interface content.
+
 -->
