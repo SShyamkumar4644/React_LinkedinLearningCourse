@@ -56,7 +56,8 @@ ReactDOM.render(
 //   </BrowserRouter>,
 //   document.getElementById("root")
 // );
-//EXPLNATION FOR STEP 1
+
+//EXPLANATION FOR STEP 1
 // The first step in configuring our router is to head over to our index.js
 // file where we're rendering our app. So I'm going to perform a little bit
 // of cleanup here just so that we can focus on the important stuff. We're
@@ -66,6 +67,26 @@ ReactDOM.render(
 // need to wrap around the app. So how do I give my app and any of the child
 // components underneath that app information about routing and where I am
 // currently? I need to pass it with this BrowserRouter. 
+
+//ChatGPT Explanation:
+
+// - Configuring React Router:
+//   - The configuration of React Router involves setting up the routing in the `index.js` file.
+//   - The first step is to import the `BrowserRouter` component from `react-router-dom`.
+//   - The `BrowserRouter` component will be used to wrap the `App` component, providing routing information to it and its child components.
+
+// - Cleaning Up `index.js`:
+//   - The `React.StrictMode` and `reportWebVitals` components are removed to focus on the routing setup.
+
+// - Wrapping `App` with `BrowserRouter`:
+//   - The `App` component is wrapped with the `BrowserRouter` component.
+//   - This enables the application and its components to access routing information and functionality.
+
+// The explanation emphasizes the role of the `BrowserRouter` component in providing 
+// routing capabilities to the application. It guides the reader through the 
+// necessary steps to configure routing in the `index.js` file by importing 
+// and using the `BrowserRouter` component to wrap the `App` component.
+
 
 //STEP 2
 // import React from "react";
@@ -84,6 +105,7 @@ ReactDOM.render(
 //   </BrowserRouter>,
 //   document.getElementById("root")
 // );
+
 //EXPLANATION FOR STEP 2
 // Okay, so we're going to also import Routes here and Route. So the
 // Routes component is going to go inside of the BrowserRouter. And then
@@ -112,6 +134,32 @@ ReactDOM.render(
 // displayed. Now, we don't want to force our users to type the correct route
 // into the URL bar. So in the next video, we're going to take a closer look at
 // how we can create links to these different pages.
+
+//ChatGPT Explanation:
+
+// - Importing Routes and Route:
+//   - Import the `Routes` and `Route` components from `react-router-dom`.
+
+// - Using Routes and Route for Configuration:
+//   - The `Routes` component is placed inside the `BrowserRouter` to define the routing configuration.
+//   - Use the `Route` component to specify the path and the corresponding component to render.
+//   - For example, `Route path="/about" component={About}` specifies that when the path is "/about", the `About` component should be rendered.
+
+// - Component Imports and Exports:
+//   - Import all the necessary components, including `About` and `Contact`.
+//   - Ensure that components are correctly exported by using named exports (`export function ...`).
+//   - Remove any default exports to ensure correct imports.
+
+// - Testing the Routes:
+//   - By navigating to different paths in the browser (e.g., "/about", "/contact"), you can see that the corresponding components are displayed.
+
+// - Dynamic Routing:
+//   - You can define as many `Route` components as needed, each mapping a path to a specific component.
+//   - Routes can be set up for different parts of the website using the `path` attribute.
+
+// - Future Focus - Creating Links:
+//   - The tutorial mentions that users should not be forced to type in the correct URL manually.
+//   - The next video will focus on how to create links to different pages within the application using React Router.
 
 // App.js file put export in all components
 
